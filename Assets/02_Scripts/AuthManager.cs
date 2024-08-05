@@ -35,6 +35,12 @@ public class AuthManager : MonoBehaviour
             // 로그 아웃
             AuthenticationService.Instance.SignOut();
         });
+
+        // 플레이어 이름 변경 버튼 이벤트
+        saveNameButton.onClick.AddListener(async () =>
+        {
+            await SetPlayerName(playerNameIf.text);
+        });
     }
 
     // 인증 이벤트 설정
@@ -74,7 +80,8 @@ public class AuthManager : MonoBehaviour
     {
         try
         {
-
+            await AuthenticationService.Instance.UpdatePlayerNameAsync(playerName);
+            messageText.text += $"PlayerName : {AuthenticationService.Instance.PlayerName}\n";
         }
         catch (AuthenticationException e)
         {
