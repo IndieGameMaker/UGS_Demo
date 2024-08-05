@@ -68,4 +68,17 @@ public class AuthManager : MonoBehaviour
             Debug.Log($"로그인 실패 : {e.Message}");
         }
     }
+
+    // 플레이어 이름 저장
+    private async Task SetPlayerName(string playerName)
+    {
+        try
+        {
+
+        }
+        catch (AuthenticationException e)
+        {
+            Debug.LogError(e.Message);
+        }
+    }
 }

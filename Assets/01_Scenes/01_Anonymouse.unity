@@ -285,7 +285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginButton: {fileID: 141692642}
   logoutButton: {fileID: 1955529940}
+  saveNameButton: {fileID: 278111965}
   messageText: {fileID: 1538844116}
+  playerNameIf: {fileID: 1844199239}
 --- !u!1 &278111963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,13 +2094,13 @@ PrefabInstance:
       addedObject: {fileID: 1955529939}
     - targetCorrespondingSourceObject: {fileID: 7757773280191004784, guid: 0a89c43a2e1244c60a0567b85bda302f, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 278111964}
+    - targetCorrespondingSourceObject: {fileID: 7757773280191004784, guid: 0a89c43a2e1244c60a0567b85bda302f, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1538844115}
     - targetCorrespondingSourceObject: {fileID: 7757773280191004784, guid: 0a89c43a2e1244c60a0567b85bda302f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1844199238}
-    - targetCorrespondingSourceObject: {fileID: 7757773280191004784, guid: 0a89c43a2e1244c60a0567b85bda302f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 278111964}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a89c43a2e1244c60a0567b85bda302f, type: 3}
 --- !u!1660057539 &9223372036854775807
