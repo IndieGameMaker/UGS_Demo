@@ -29,6 +29,7 @@ public struct ItemData
 public class CloudSaveManager : MonoBehaviour
 {
     [SerializeField] private Button singleDataSaveButton;
+    [SerializeField] private Button multiDataSaveButton;
 
     [Header("Player Data")]
     [SerializeField] private PlayerData playerData;
