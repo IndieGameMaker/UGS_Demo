@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class AuthManager : MonoBehaviour
 {
     [SerializeField] private Button loginButton;
+    [SerializeField] private Button logoutButton;
     [SerializeField] private TMP_Text messageText;
 
     private async void Awake()
@@ -25,6 +26,12 @@ public class AuthManager : MonoBehaviour
             // 익명 로그인 처리
             await LoginAsync();
         });
+
+        logoutButton.onClick.AddListener(() =>
+        {
+            // 로그 아웃
+            AuthenticationService.Instance.SignOut();
+        });
     }
 
     // 인증 이벤트 설정
@@ -39,7 +46,7 @@ public class AuthManager : MonoBehaviour
 
         AuthenticationService.Instance.SignedOut += () =>
         {
-            Debug.Log("로그 아웃");
+            Debug.Log("로그 아웃\n");
         };
         /*
             SingInFailed
