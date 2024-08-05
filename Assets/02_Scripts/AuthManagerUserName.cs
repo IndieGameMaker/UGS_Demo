@@ -27,6 +27,20 @@ namespace AuthUserNamePassword
             {
                 await SignUpUserNamePassword(userNameText.text, passwordText.text);
             });
+
+            // 로그인
+            loginButton.onClick.AddListener(async () =>
+            {
+                try
+                {
+                    await AuthenticationService.Instance.SignInWithUsernamePasswordAsync(userNameText.text, passwordText.text);
+                    Debug.Log("로그인 성공");
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e.Message);
+                }
+            });
         }
 
         private async Task SignUpUserNamePassword(string userName, string passwd)
