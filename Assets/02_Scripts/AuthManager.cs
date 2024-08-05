@@ -24,12 +24,22 @@ public class AuthManager : MonoBehaviour
         });
     }
 
+    // 인증 이벤트 설정
+    private void EventConfig()
+    {
+        AuthenticationService.Instance.SignedIn += () =>
+        {
+            Debug.Log("익명 로그인 성공");
+            string id = AuthenticationService.Instance.PlayerId;
+            messageText.text += $"Player Id : {id}";
+        };
+    }
+
     private async Task LoginAsync()
     {
         try
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
-            Debug.Log("익명 로그인 성공");
         }
         catch (AuthenticationException e)
         {
