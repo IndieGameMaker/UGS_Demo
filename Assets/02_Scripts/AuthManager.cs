@@ -16,6 +16,9 @@ public class AuthManager : MonoBehaviour
         // UGS 초기화
         await UnityServices.InitializeAsync();
 
+        // 인증 이벤트 연결
+        EventConfig();
+
         // 버튼 이벤트 연결
         loginButton.onClick.AddListener(async () =>
         {
@@ -31,8 +34,17 @@ public class AuthManager : MonoBehaviour
         {
             Debug.Log("익명 로그인 성공");
             string id = AuthenticationService.Instance.PlayerId;
-            messageText.text += $"Player Id : {id}";
+            messageText.text += $"Player Id : {id}\n";
         };
+
+        AuthenticationService.Instance.SignedOut += () =>
+        {
+            Debug.Log("로그 아웃");
+        };
+        /*
+            SingInFailed
+            Expired
+        */
     }
 
     private async Task LoginAsync()
