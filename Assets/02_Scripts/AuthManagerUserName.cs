@@ -48,6 +48,8 @@ namespace AuthUserNamePassword
             try
             {
                 await AuthenticationService.Instance.SignUpWithUsernamePasswordAsync(userName, passwd);
+
+                //await AuthenticationService.Instance.UpdatePasswordAsync(현재비밀번호, 변경할비밀번호);
             }
             catch (Exception e)
             {
