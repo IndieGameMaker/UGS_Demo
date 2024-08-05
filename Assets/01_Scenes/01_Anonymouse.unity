@@ -283,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68390a0da65fb420897368a101b0a660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loginButton: {fileID: 141692642}
+  messageText: {fileID: 1538844116}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
