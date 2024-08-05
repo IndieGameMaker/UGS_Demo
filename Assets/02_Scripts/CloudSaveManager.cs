@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
@@ -6,9 +7,31 @@ using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
+[Serializable]
+public struct PlayerData
+{
+    public string name;
+    public int level;
+    public int xp;
+    public int gole;
+    public List<ItemData> items;
+}
+
+[Serializable]
+public struct ItemData
+{
+    public string name;
+    public int value;
+    public string icon;
+}
+
+
 public class CloudSaveManager : MonoBehaviour
 {
     [SerializeField] private Button singleDataSaveButton;
+
+    [Header("Player Data")]
+    [SerializeField] private PlayerData playerData;
 
     private async void Awake()
     {
