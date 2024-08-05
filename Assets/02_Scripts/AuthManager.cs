@@ -26,6 +26,14 @@ public class AuthManager : MonoBehaviour
 
     private async Task LoginAsync()
     {
-        await AuthenticationService.Instance
+        try
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+            Debug.Log("익명 로그인 성공");
+        }
+        catch (AuthenticationException e)
+        {
+            Debug.Log($"로그인 실패 : {e.Message}");
+        }
     }
 }
