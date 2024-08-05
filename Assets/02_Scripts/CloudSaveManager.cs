@@ -74,4 +74,17 @@ public class CloudSaveManager : MonoBehaviour
         Debug.Log("데이터 저장 완료!");
     }
 
+    public async Task SaveMultiData<T>(string key, T saveData)
+    {
+        // 딕셔너리 자료형에 저장
+        var data = new Dictionary<string, object>
+        {
+            {key, saveData}
+        };
+
+        // 저장
+        await CloudSaveService.Instance.Data.Player.SaveAsync(data);
+        Debug.Log("멀티 데이터 저장 완료");
+    }
+
 }
