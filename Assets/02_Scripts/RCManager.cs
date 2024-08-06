@@ -22,6 +22,13 @@ public class RCManager : MonoBehaviour
         };
         // 익명 로그인 처리
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+        // Remote Config 이벤트 연결
+        RemoteConfigService.Instance.FetchCompleted += (response) =>
+        {
+            Debug.Log("데이터 로드 완료");
+            playerScale = RemoteConfigService.Instance.appConfig.GetFloat("player_scale");
+        };
     }
 
     // 데이터 로드를 위한 구조체 선언
