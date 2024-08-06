@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"61fc1232-40eb-4b84-ab25-3f964ea69f12\"\n   
+  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"d1bf1f8a-03a2-4650-9d51-f73c359ea7ff\"\n   
     },\n    \"rs\": {\n      \"key\": \"player_scale\",\n      \"type\": \"float\",\n     
-    \"value\": 1.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"5134707c-9262-4761-b962-ca175ab340f6\"\n   
+    \"value\": 1.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"8db4cf94-fe05-4139-a167-1b4a7b4c0ac6\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
     \"value\": 3.0\n    }\n  }\n]"
-  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"61fc1232-40eb-4b84-ab25-3f964ea69f12\"\n   
+  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"d1bf1f8a-03a2-4650-9d51-f73c359ea7ff\"\n   
     },\n    \"rs\": {\n      \"key\": \"player_scale\",\n      \"type\": \"float\",\n     
-    \"value\": 1.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"5134707c-9262-4761-b962-ca175ab340f6\"\n   
+    \"value\": 1.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"8db4cf94-fe05-4139-a167-1b4a7b4c0ac6\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
     \"value\": 3.0\n    }\n  }\n]"
   _environments: "[\n  {\n    \"projectId\": \"cb123433-6ca4-4d5c-b41c-c2dadaacebd9\",\n   
