@@ -92,4 +92,33 @@ public class CloudSaveManager : MonoBehaviour
         Debug.Log("멀티 데이터 저장 완료");
     }
 
+    // 싱글 데이터 로드
+    #region 싱글데이터 로드
+    /*
+    HashSet<T>
+    1. 중복 허용하지 않음
+    2. 속도가 빠르다.
+    3. TryGetValue 메소드로 값을 읽을수 있다.
+    */
+
+    public async Task LoadData()
+    {
+        var prams = new HashSet<string> { "player_name", "level", "xp" };
+        var data = await CloudSaveService.Instance.Data.Player.LoadAsync(prams);
+
+        if (data.TryGetValue("player_name", out var playerName))
+        {
+            Debug.Log("PlayerName : " + playerName);
+        }
+        if (data.TryGetValue("level", out var level))
+        {
+            Debug.Log("Level : " + level);
+        }
+    }
+    #endregion
+
+    // 멀티 데이터 로드
+    #region 멀티 데이터 로드
+
+    #endregion
 }
