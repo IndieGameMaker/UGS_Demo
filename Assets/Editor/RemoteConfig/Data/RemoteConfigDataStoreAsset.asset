@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"b4dfb2b7-a4df-4b07-a0ad-d2555090d98c\"\n   
+  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"db0f3ce5-df24-4448-9246-98b90838460e\"\n   
     },\n    \"rs\": {\n      \"key\": \"player_scale\",\n      \"type\": \"float\",\n     
-    \"value\": 3.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"230a01f7-740d-4abd-b772-93b3f97c87d4\"\n   
+    \"value\": 3.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"fb049445-d648-4181-bd9e-966efac98e7c\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
     \"value\": 3.0\n    }\n  }\n]"
-  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"b4dfb2b7-a4df-4b07-a0ad-d2555090d98c\"\n   
+  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"db0f3ce5-df24-4448-9246-98b90838460e\"\n   
     },\n    \"rs\": {\n      \"key\": \"player_scale\",\n      \"type\": \"float\",\n     
-    \"value\": 3.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"230a01f7-740d-4abd-b772-93b3f97c87d4\"\n   
+    \"value\": 3.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"fb049445-d648-4181-bd9e-966efac98e7c\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
     \"value\": 3.0\n    }\n  }\n]"
   _environments: "[\n  {\n    \"projectId\": \"cb123433-6ca4-4d5c-b41c-c2dadaacebd9\",\n   

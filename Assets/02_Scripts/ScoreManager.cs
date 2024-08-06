@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -26,7 +27,9 @@ public class ScoreManager : MonoBehaviour
         saveButton.onClick.AddListener(() =>
         {
             int score = int.Parse(scoreIf.text);
+            var response = Board.Instance.AddPlayerScoreAsync("Ranking", score);
 
+            Debug.Log(JsonConvert.SerializeObject(response));
         });
     }
 }
