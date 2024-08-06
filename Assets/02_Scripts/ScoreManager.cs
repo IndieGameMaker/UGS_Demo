@@ -4,6 +4,7 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UI;
+using Board = Unity.Services.Leaderboards;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -21,5 +22,11 @@ public class ScoreManager : MonoBehaviour
         };
         // 익명 로그인 처리
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+        saveButton.onClick.AddListener(() =>
+        {
+            int score = int.Parse(scoreIf.text);
+
+        });
     }
 }
