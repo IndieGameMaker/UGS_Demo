@@ -25,5 +25,12 @@ public class RCManager : MonoBehaviour
     }
 
     // 데이터 로드를 위한 구조체 선언
-    public struct
+    public struct userAttr { }
+    public struct appAttr { }
+
+    // 데이터 로드
+    private async Task GetRemoteConfigData()
+    {
+        await RemoteConfigService.Instance.FetchConfigsAsync(new userAttr(), new appAttr());
+    }
 }
