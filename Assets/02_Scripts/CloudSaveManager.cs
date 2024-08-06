@@ -64,6 +64,8 @@ public class CloudSaveManager : MonoBehaviour
         {
             await SaveMultiData<PlayerData>("PlayerDataAndItems", playerData);
         });
+
+        singleDataLoadButton.onClick.AddListener(async () => await LoadData());
     }
 
     public async Task SaveSingleData()
@@ -111,11 +113,11 @@ public class CloudSaveManager : MonoBehaviour
 
         if (data.TryGetValue("player_name", out var playerName))
         {
-            Debug.Log("PlayerName : " + playerName);
+            Debug.Log("PlayerName : " + playerName.Value.GetAs<string>());
         }
         if (data.TryGetValue("level", out var level))
         {
-            Debug.Log("Level : " + level);
+            Debug.Log("Level : " + level.Value.GetAs<int>());
         }
     }
     #endregion

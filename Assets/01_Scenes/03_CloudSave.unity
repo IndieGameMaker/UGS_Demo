@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   singleDataSaveButton: {fileID: 261163354}
   multiDataSaveButton: {fileID: 2133073096}
+  singleDataLoadButton: {fileID: 916455612}
+  multiDataLoadButton: {fileID: 2090454122}
   playerData:
     name: Zackiller
     level: 20
