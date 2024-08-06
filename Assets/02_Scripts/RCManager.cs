@@ -28,7 +28,14 @@ public class RCManager : MonoBehaviour
         {
             Debug.Log("데이터 로드 완료");
             playerScale = RemoteConfigService.Instance.appConfig.GetFloat("player_scale");
+            moveSpeed = RemoteConfigService.Instance.appConfig.GetFloat("move_speed");
+
+            GameObject.Find("Mummy_Mon").transform.localScale = Vector3.one * playerScale;
         };
+
+        await Task.Delay(3000);
+
+        await GetRemoteConfigData();
     }
 
     // 데이터 로드를 위한 구조체 선언
