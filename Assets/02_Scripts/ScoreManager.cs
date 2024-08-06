@@ -4,7 +4,7 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UI;
-using Board = Unity.Services.Leaderboards;
+using Board = Unity.Services.Leaderboards.LeaderboardsService;
 
 public class ScoreManager : MonoBehaviour
 {
