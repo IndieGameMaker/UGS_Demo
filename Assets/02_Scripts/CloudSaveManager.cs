@@ -66,6 +66,7 @@ public class CloudSaveManager : MonoBehaviour
         });
 
         singleDataLoadButton.onClick.AddListener(async () => await LoadData());
+        multiDataLoadButton.onClick.AddListener(async () => await LoadData<PlayerData>("PlayerDataAndItems"));
     }
 
     public async Task SaveSingleData()
@@ -124,6 +125,19 @@ public class CloudSaveManager : MonoBehaviour
 
     // 멀티 데이터 로드
     #region 멀티 데이터 로드
+    public async Task LoadData<T>(string key)
+    {
+        var pram = new HashSet<string> { key };
+        var data = await CloudSaveService.Instance.Data.Player.LoadAsync(pram);
 
+        playerData = new PlayerData();
+
+        await Task.Delay(2000);
+
+        if (data.TryGetValue(key, out var loadData))
+        {
+            playerData = loadData.Value.GetAs<PlayerData>();
+        }
+    }
     #endregion
 }
